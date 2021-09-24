@@ -1,5 +1,6 @@
 @import "vars.less";
 
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,21 @@ body {
     color: @main_font_dark;
 }
 .container {
-    width: 90%;
-    height:90%;
-    margin: 5%,5%;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: 100px, 800px, 100px; 
+    gap: 5px; 
+    height: 90%;
+    margin: 5%, 5%;
+    grid-template-areas:
+        "header header header header header"
+        "sidebar mainform mainform mainform mainform "
+        "footer footer footer footer footer ";
 }
+
+@import "header.less";
+@import "sidebar.less";
+@import "mainform.less";
+@import "footer.less";
+
+

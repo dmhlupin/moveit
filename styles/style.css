@@ -8,7 +8,46 @@ body {
   color: #899ba1;
 }
 .container {
-  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px, 800px, 100px;
+  gap: 5px;
   height: 90%;
-  margin: 5%,5%;
+  margin: 5%, 5%;
+  grid-template-areas: "header header header header header" "sidebar mainform mainform mainform mainform " "footer footer footer footer footer ";
+}
+.header {
+  grid-area: header;
+  height: 100px;
+  border: 1px solid whitesmoke;
+}
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  list-style-type: none;
+}
+.headerMenuItem {
+  margin: 10px;
+  border: 1px dotted lightblue;
+}
+.searchBar {
+  flex: 1 1 auto;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #22313a;
+  border: 1px solid whitesmoke;
+}
+.mainform {
+  grid-area: mainform;
+  background-color: #2b3942;
+  height: 800px;
+  border: 1px solid whitesmoke;
+}
+.footer {
+  grid-area: footer;
+  border: 1px solid whitesmoke;
+  height: 80px;
 }
