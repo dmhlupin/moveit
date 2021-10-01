@@ -2,52 +2,126 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  color: #899ba1;
+}
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: #1e2a31;
   color: #899ba1;
 }
+li {
+  list-style-type: none;
+}
 .container {
+  outline: 1px solid lightblue;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 100px, 800px, 100px;
-  gap: 5px;
-  height: 90%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px auto 100px;
+  height: 100vh;
   margin: 5%, 5%;
-  grid-template-areas: "header header header header header" "sidebar mainform mainform mainform mainform " "footer footer footer footer footer ";
+  grid-template-areas: "header header header header header header" "sidebar mainform mainform mainform mainform mainform " "footer footer footer footer footer footer ";
 }
 .header {
   grid-area: header;
   height: 100px;
-  border: 1px solid whitesmoke;
 }
 .headerMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  list-style-type: none;
+}
+.headerMenu #logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f5c11e;
+  margin-left: 40px;
+}
+.headerMenu .setupItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerMenu .setupItem a {
+  margin: 0 5px;
 }
 .headerMenuItem {
   margin: 10px;
-  border: 1px dotted lightblue;
 }
 .searchBar {
   flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+}
+.search {
+  height: 30px;
+}
+.searchField {
+  min-width: 250px;
+  background-color: #edefef;
+  color: #333;
+}
+.search,
+.search:active,
+.search:focus,
+.search:hover {
+  outline: none;
+  outline-offset: 0;
+  border: none;
+  padding: 5px 10px;
+}
+.searchButton {
+  background-color: #22313a;
+  outline: none;
+  color: #899ba1;
+  font-size: 16px;
 }
 .sidebar {
   grid-area: sidebar;
   background-color: #22313a;
-  border: 1px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 250px;
+}
+.sidebarMenuItem {
+  font-size: 20px;
+  font-weight: 400px;
+}
+.sidebarMenuItem:hover {
+  background-color: #2f3f49;
+}
+.sidebar .active {
+  background-color: #2b3942;
+}
+.sidebarMenuItem a {
+  display: block;
+  height: 100%;
+  padding: 20px 40px;
 }
 .mainform {
   grid-area: mainform;
   background-color: #2b3942;
-  height: 800px;
-  border: 1px solid whitesmoke;
 }
 .footer {
   grid-area: footer;
-  border: 1px solid whitesmoke;
-  height: 80px;
+  height: 100px;
+}
+.footerItems {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+}
+.author,
+.copyright {
+  font-size: 14px;
+}
+.copyright {
+  font-style: italic;
 }

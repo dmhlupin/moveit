@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Rubik&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/84c23b9418.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -13,21 +17,33 @@
         <div class="header">
             <ul class="headerMenu">
                 <li class="headerMenuItem" id="logo">MoveIT</li>
-                <li class="headerMenuItem searchBar"><input type="search"></li>
-                <li class="headerMenuItem" id="settingsButton">Settings</li>
-                <li class="headerMenuItem" id="userInfo">UserName</li>
+                <li class="headerMenuItem searchBar">
+                    <input type="search" class="searchField search">
+                    <input type="submit" value="Search" class="search searchButton">
+                </li>   
+                <li class="headerMenuItem setupItem">
+                    <a href="#"><i class="fas fa-2x fa-cogs"></i></a>  
+                    <a href="#"> Settings</a>
+                </li>
+                <li class="headerMenuItem setupItem">
+                    <a href="#"><i class="fas fa-2x fa-user-circle"></i></a>
+                    <a href="#">UserName</a>
+                </li>
             </ul>
         </div>
         <div class="sidebar"><ul class="sidebarMenu">
-            <li class="sidebarMenuItem">Home</li>
-            <li class="sidebarMenuItem">MyStore</li>
-            <li class="sidebarMenuItem">MyExpluatation</li>
-            <li class="sidebarMenuItem">Search</li>
-            <li class="sidebarMenuItem">Profile</li>
+            <li class="sidebarMenuItem active"><a href="#">Home</a></li>
+            <li class="sidebarMenuItem"><a href="#">Store</a></li>
+            <li class="sidebarMenuItem"><a href="#">In operation</a></li>
+            <li class="sidebarMenuItem"><a href="#">Search</a></li>
+            <li class="sidebarMenuItem"><a href="#">Profile</a></li>
         </ul></div>
         <div class="mainform"></div>
         <div class="footer">
-            copyright 2021
+            <ul class="footerItems">
+                <li class="footerItem"><p class="author">Designed by DNDesign</p></li>
+                <li class="footerItem"><p class="copyright">Copyright, 2021</p></li>
+            </ul>
         </div>
     </div>
 </body>
