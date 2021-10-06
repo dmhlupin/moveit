@@ -14,6 +14,7 @@
         "tableContainer description";
     padding-bottom: 10px;
     padding-left: 10px;
+    max-height: 100%;
 }
 
 .tableContainer, .picture, .description {
@@ -35,18 +36,23 @@
 
 .tableContainer {
     grid-area: tableContainer;
+    max-height: 80vh;
+    overflow-y: auto; 
     
 }
+
 .tableList {
     width: 100%;
-    margin: 0 10px;
+    
 }
 .tableList li {
     display: block;
-    padding: 20px 0;
+    padding: 20px 10px;
     font-size: 20px;
     width: 95%;
     border-bottom: 1px solid @main_form_bg_color;  
+    max-height:100%;
+    color: @main_font_light;
 }
 
 .picture {
@@ -62,6 +68,8 @@
     flex-direction: column;
     align-items:baseline;
     justify-content: flex-start;
+    max-height: 40vh;
+    overflow-y: auto;
 }
 .descList {
     width: 100%;
@@ -69,7 +77,7 @@
 .descList li {
 
     display: block;
-    
+    color: @main_font_light;
     padding: 20px;
     font-size: 20px;    
 }
