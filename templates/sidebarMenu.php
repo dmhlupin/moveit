@@ -1,7 +1,7 @@
 <div class="sidebar">
     <ul class="sidebarMenu">
         <?php foreach ($menu as $menuItem): ?>
-            <li class="sidebarMenuItem"><a href="<?=$menuItem['link']?>"><?=$menuItem['name']?></a></li>
+            <li class="sidebarMenuItem <?=$menuItem['active']?>"><a href="<?=$menuItem['link']?>"><?=$menuItem['name']?></a></li>
         <?php endforeach; ?>
         <!-- <li class="sidebarMenuItem active"><a href="{$menuItem['link']}">Home</a></li>
         <li class="sidebarMenuItem"><a href="#">Store</a></li>
