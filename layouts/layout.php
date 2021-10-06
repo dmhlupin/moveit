@@ -12,5 +12,5 @@
     <script src="https://kit.fontawesome.com/84c23b9418.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?={$pageContent}?>>
+    <?=$header?>>
 </body>
