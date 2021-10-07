@@ -137,7 +137,8 @@ li {
 }
 .tableContainer,
 .picture,
-.description {
+.description,
+.homeContainer {
   background-color: #22313a;
 }
 .pageHeader {

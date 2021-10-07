@@ -16,3 +16,4 @@ function renderTemplate($page, $params = [])
     return ob_get_clean();
 }
 
+
