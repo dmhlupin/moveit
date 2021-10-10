@@ -1,3 +1,3 @@
 <div class="picture">
-    <img src="images/<?=$itemImage?>" alt="">
+    <img src="<?=$__DIR__ . "/images/" . $itemImage?>" alt="">
 </div>

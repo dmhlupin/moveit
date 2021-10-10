@@ -12,7 +12,7 @@
         <li class="headerMenuItem setupItem">
             <a href="#"><i class="fas fa-2x fa-user-circle"></i></a>
             <a href="#"><?=$userName?></a>
-            <a href="/?page=login">Выход</a>
+            <a href="/">Выход</a>
         </li>
     </ul>
 </div>

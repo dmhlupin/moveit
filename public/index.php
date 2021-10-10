@@ -4,31 +4,29 @@ include '../config/config.php';
 // Переменные
 $page = 'login';
 $params = [];
-
-
-
-
+$section = "home";
 
 // Рендер шаблона
-if(isset($_GET['page'])) {
-    $page = $_GET['page'];
-    $userName = (isset($_GET['login']))?$_GET['login']:'Guest';
-    $section = (isset($_GET['section']))?$_GET['section']:'home';
-    switch($page){
-        case 'main': 
-            $params = [
-                'header' => renderTemplate("header",["userName" => $userName]),
-                'sidebarMenu' => renderTemplate("sidebarMenu",["menu" => getMenu()]),
-                'mainblock' => renderTemplate("mainblock", ["blockContent" => getMainBlockContent($section)]), //сделать отдельную функцию в конфиге с определением массива параметров и массива пунктов локального меню в зависимости от страницы
-                'footer' => renderTemplate("footer", ["year" => 2021]),
-            ];
-            break;
-        case 'login':
-            $params = [];
-            break;
-        default: $params = [];
+$url_array = explode('/', $_SERVER['REQUEST_URI']);
+if($url_array[1] == "") {
+    $page = "login";
+} else {
+    $page = $url_array[1];
+    if($url_array[2] == "") {
+        $section = "home";
+    } else {
+        $section = $url_array[2];
+        if($url_array[3] == ""){
+            $action = "";
+        } else {
+            $action = $url_array[3];
+        }
     }
+    $userName = (isset($_POST['login']))?$_POST['login']:'Guest';
 }
+//Контроллер
+$params = prepareVars($page, $section, $userName, $action);
 
+// Выводим шаблон
 echo render($page, $params);
 

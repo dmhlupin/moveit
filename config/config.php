@@ -10,9 +10,11 @@ define('USER', 'test');
 define('PASS', '12345');
 define('DB', 'moveit');
 
-include "../engine/functions.php";
-include "../engine/interface.php";
-include "../engine/mainblockconstructor.php";
+include "../engine/render.php";
+include "../models/interface.php";
+include "../engine/mainBlockController.php";
+include "../engine/controller.php";
 include "../engine/db.php";
-include "../engine/items.php";
+include "../models/items.php";
+include "../models/feedback.php";
 

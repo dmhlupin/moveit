@@ -9,6 +9,10 @@ function getDb()
     return $db;
 }
 
+function filterSecurity($str) {
+    return strip_tags(htmlspecialchars(mysqli_real_escape_string(getDb(), $str)));
+}
+
 // Запрос для получения массива записей
 function getAssocResult($sql) 
 {
