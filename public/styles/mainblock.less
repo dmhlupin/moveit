@@ -6,7 +6,7 @@
     background-color: @main_form_bg_color;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 54px 50% auto;
+    grid-template-rows: 54px 47% 44%;
     grid-gap: 10px;
     grid-template-areas: 
         "pageHeader pageHeader"   
@@ -33,7 +33,9 @@
     font-size: @mainFontSize;
     height: 100%;
 }
-
+.homeContainer {
+    height: 400px;
+}
 .tableContainer {
     grid-area: tableContainer;
     max-height: 80vh;
@@ -93,3 +95,19 @@
 .descItem:nth-child(2n) {
      background-color: @sidebar_bg_active;
 }
+.feedbackContainer {
+    padding: 10px;
+}
+.inputFieldFeedback {
+    min-width: 250px;
+    background-color: @search_bg_color;
+    color: @search_font_color;
+    margin: 10px 0;
+}
+    
+.inputFieldFeedback, .inputFieldFeedback:active, .inputFieldFeedback:focus, .inputFieldFeedback:hover {
+    outline: none;
+    outline-offset: 0;
+    border: none;
+    padding: 5px 10px;
+} 

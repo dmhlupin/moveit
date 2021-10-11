@@ -35,7 +35,7 @@ li {
   outline: 1px solid lightblue;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 100px auto 100px;
+  grid-template-rows: 100px 82% 100px;
   height: 100vh;
   margin: 5%, 5%;
   grid-template-areas: "header header header header header header" "sidebar mainform mainform mainform mainform mainform " "footer footer footer footer footer footer ";
@@ -128,7 +128,7 @@ li {
   background-color: #2b3942;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 54px 50% auto;
+  grid-template-rows: 54px 47% 44%;
   grid-gap: 10px;
   grid-template-areas: "pageHeader pageHeader" "tableContainer picture" "tableContainer description";
   padding-bottom: 10px;
@@ -151,6 +151,9 @@ li {
   align-items: center;
   font-size: 16px;
   height: 100%;
+}
+.homeContainer {
+  height: 400px;
 }
 .tableContainer {
   grid-area: tableContainer;
@@ -204,6 +207,24 @@ li {
 }
 .descItem:nth-child(2n) {
   background-color: #2b3942;
+}
+.feedbackContainer {
+  padding: 10px;
+}
+.inputFieldFeedback {
+  min-width: 250px;
+  background-color: #edefef;
+  color: #333;
+  margin: 10px 0;
+}
+.inputFieldFeedback,
+.inputFieldFeedback:active,
+.inputFieldFeedback:focus,
+.inputFieldFeedback:hover {
+  outline: none;
+  outline-offset: 0;
+  border: none;
+  padding: 5px 10px;
 }
 .footer {
   grid-area: footer;

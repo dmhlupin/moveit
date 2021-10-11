@@ -4,8 +4,8 @@
     <form action="/main/home/add_feedback/?itemId=<?=$itemId?>" method="post">
         <p>Оставьте отзыв: </p> 
         <input type="text" name="item" value="<?=$itemId?>" hidden>
-        <input type="text" name="name" placeholder="Имя"><br>
-        <input type="text" name="message" placeholder="Напишите отзыв здесь..."><br>
+        <input class="inputFieldFeedback" type="text" name="name" placeholder="Имя"><br>
+        <input class="inputFieldFeedback"type="text" name="message" placeholder="Напишите отзыв здесь..."><br>
         <input type="submit" value="Добавить">
     </form>
     <br>
