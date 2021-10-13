@@ -51,7 +51,7 @@ function getMainBlockContent($section, $action="")
             renderTemplate("filesContent",["files" => getFiles()]);
             break;
         case 'orders':
-            return renderTemplate("blockHeader",["title" => "Файлы"]) . 
+            return renderTemplate("blockHeader",["title" => "Заказы"]) . 
             renderTemplate("orders", ["orders" => getUserOrders($userId)]);
             break;
         default: return 'Не готово!';
