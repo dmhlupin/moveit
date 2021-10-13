@@ -6,13 +6,16 @@
             <input type="submit" value="Search" class="search searchButton">
         </li>   
         <li class="headerMenuItem setupItem">
+            <a href="/main/orders"><?=$headOrders?></a>
+        </li>
+        <li class="headerMenuItem setupItem">
             <a href="#"><i class="fas fa-2x fa-cogs"></i></a>  
             <a href="#"> Settings</a>
         </li>
         <li class="headerMenuItem setupItem">
             <a href="#"><i class="fas fa-2x fa-user-circle"></i></a>
             <a href="#"><?=$userName?></a>
-            <a href="/">Выход</a>
+            <a href="/logout">Выход</a>
         </li>
     </ul>
 </div>

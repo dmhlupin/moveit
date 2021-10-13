@@ -3,32 +3,38 @@
 @import "vars.less";
 
 
-.login_container {
+.login_container, .regContainer {
     margin: 20vh auto;
     width: 500px;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: @main_form_bg_color;
 }
+.login_container {
+    height: 500px;
+}
+.regContainer {
+    height: 500px;
+}
+
 
 .login_logo_container, .login_form_container {
     margin: 30px;
 }
-.login_form {
+.login_form, .reg_form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.login_form * {
+.login_form *, .reg_form * {
     margin: 5px 0;
 }
 
-.login_form .login_input {
+.login_form .login_input, .reg_form .regInput {
     width: 400px;
     height: 30px;
     font-size: 20px;
@@ -45,7 +51,7 @@
     font-weight: 400;
 }
 .submitButton {
-    width: 120px;
+    width: 200px;
     height: 32px;
     display: flex;
     align-items: center;
@@ -54,6 +60,10 @@
     font-size: 20px;
     font-weight: 400;
     margin-top: 30px;
+}
+
+.regLink {
+    text-decoration: underline;
 }
 
 #logo {

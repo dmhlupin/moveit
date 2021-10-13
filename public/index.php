@@ -1,15 +1,13 @@
 ﻿<?php
+session_start();
 include '../config/config.php';
 
-// Переменные
-$page = 'login';
-$params = [];
-$section = "home";
 
-// Рендер шаблона
+// ЧПУ
 $url_array = explode('/', $_SERVER['REQUEST_URI']);
 if($url_array[1] == "") {
-    $page = "login";
+    $page = "main";
+    $section = "home";
 } else {
     $page = $url_array[1];
     if($url_array[2] == "") {
@@ -22,10 +20,10 @@ if($url_array[1] == "") {
             $action = $url_array[3];
         }
     }
-    $userName = (isset($_POST['login']))?$_POST['login']:'Guest';
+    
 }
 //Контроллер
-$params = prepareVars($page, $section, $userName, $action);
+$params = prepareVars($page, $section, $action);
 
 // Выводим шаблон
 echo render($page, $params);

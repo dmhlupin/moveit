@@ -1,5 +1,11 @@
 <div class="description">
     <ul class="descList" id="descList1">
+        <li class="descItem">
+            <form action="/main/home/to_order/?itemId=<?=$itemId?>" method="post">
+                <input type="text" name="orderedItem" value="<?=$itemId?>" hidden>
+                <input type="submit" value="Заказать">
+            </form>
+        </li>
         <li class="descItem">Наименование: <?=$itemTitle?></li>
         <li class="descItem">Описание: <?=$itemDesc?></li>
         <li class="descItem">Дата начала эксплуатации: <?=$itemStart?></li>
