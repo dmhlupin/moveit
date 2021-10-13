@@ -3,8 +3,6 @@
 function prepareVars($page, $section, $action = "") {
 
     $params = [];
-    // $params['userName'] = get_user();
-    // $params['auth'] = is_auth();
     $params['message'] = 'Please login!';
     
     
@@ -33,17 +31,17 @@ function prepareVars($page, $section, $action = "") {
                     }
                 }
                 else {
-                    $params['message'] = 'Wrong username or password!';
-                    
+                    $params['message'] = 'Wrong username or password!';                
                     break;
                 }
             } 
             if(is_auth()){
-                $userId = $_SESSION['id']; 
+                $userId = get_user_id(); 
+                $userName = get_user_name();
                 $params = [
-                    'userName' => get_user(),
-                    'auth' => is_auth(),
-                    'header' => renderTemplate("header", ["userName" => get_user(),
+                    'userName' => $userName,
+                    'auth' => true,
+                    'header' => renderTemplate("header", ["userName" => $userName,
                                                           "headOrders" => getOrdersCount($userId)]),
                     'sidebarMenu' => renderTemplate("sidebarMenu",["menu" => getMenu()]),
                     'mainblock' => renderTemplate("mainblock", ["blockContent" => getMainBlockContent($section, $action)]), //сделать отдельную функцию в конфиге с определением массива параметров и массива пунктов локального меню в зависимости от страницы

@@ -11,6 +11,7 @@ function getFiles() {
 function getMainBlockContent($section, $action="")
 {
     $userId = get_user_id();
+    $userName = get_user_name();
     switch ($section) {
         case 'home':
             $items = getItems();
@@ -18,7 +19,7 @@ function getMainBlockContent($section, $action="")
             $item = getItem($itemId);
 
             if($action=="add_feedback") {
-                $author = filterSecurity($_POST['name']);
+                $author = $userId;
                 $text = filterSecurity($_POST['message']);
                 $i = filterSecurity($_POST['item']);
                 addFeedback($author, $text, $i);
@@ -27,7 +28,8 @@ function getMainBlockContent($section, $action="")
                 $customer = $userId;
                 $itemId = filterSecurity($_POST['orderedItem']);
                 addOrder($customer, $itemId);
-                
+                header("Location: /");
+                die();
             }
 
             return renderTemplate("blockHeader",["title" => "Каталог"]).
