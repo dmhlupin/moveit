@@ -1,0 +1,43 @@
+@import "vars.less";
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: @main_font_dark;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: @bg_main_color;
+    color: @main_font_dark;
+}
+li {
+    list-style-type: none;
+}
+
+
+.container {
+    outline: 1px solid lightblue;
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: 100px auto 100px; 
+//    gap: px; 
+    height: 100vh;
+    margin: 5%, 5%;
+    grid-template-areas:
+        "header header header header header header"
+        "sidebar mainform mainform mainform mainform mainform "
+        "footer footer footer footer footer footer ";
+}
+
+@import "header.less";
+@import "sidebar.less";
+@import "mainform.less";
+@import "footer.less";
+
+
